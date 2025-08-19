@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Clock, Users, Calendar, Award, Target, MapPin } from "lucide-react";
+import { BookOpen, Clock, Users, Calendar, Award, Target, MapPin, ChevronRight } from "lucide-react";
 import DemoForm from "@/components/DemoForm";
 
 const WBJEEPage = () => {
@@ -96,14 +96,14 @@ const WBJEEPage = () => {
           <p className="text-xl max-w-3xl mx-auto mb-8">
             Kolkata's premier coaching for West Bengal Joint Entrance Examination with proven results
           </p>
-          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-6 px-8">
+          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-6 px-8 rounded-full">
             Book Free Demo Class
           </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why Choose Our WBJEE Program?</h2>
@@ -114,9 +114,9 @@ const WBJEEPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center border-0 shadow-lg rounded-2xl hover:shadow-xl transition-shadow">
                 <CardContent className="pt-8">
-                  <div className="bg-gray-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -140,15 +140,15 @@ const WBJEEPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course) => (
-              <Card key={course.id} className="flex flex-col h-full relative">
+              <Card key={course.id} className="flex flex-col h-full relative border-0 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
                 {course.popular && (
-                  <Badge className="absolute top-4 right-4 bg-yellow-500 hover:bg-yellow-600">
+                  <Badge className="absolute top-4 right-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
                     Popular
                   </Badge>
                 )}
-                <CardHeader>
+                <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-2">
-                    <Badge variant="secondary">WBJEE</Badge>
+                    <Badge variant="secondary" className="bg-blue-50 text-blue-700">WBJEE</Badge>
                     <div className="text-right">
                       <div className="text-lg font-bold text-blue-600">{course.price}</div>
                       {course.originalPrice && (
@@ -188,7 +188,7 @@ const WBJEEPage = () => {
                     </ul>
                   </div>
                   
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-6 rounded-full">
                     Enroll Now
                   </Button>
                 </CardContent>
@@ -199,7 +199,7 @@ const WBJEEPage = () => {
       </section>
 
       {/* Demo Form Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -209,7 +209,7 @@ const WBJEEPage = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10">
               <DemoForm />
             </div>
           </div>
@@ -223,7 +223,7 @@ const WBJEEPage = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join thousands of successful students who prepared with Improvise Academy
           </p>
-          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-6 px-8">
+          <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-6 px-8 rounded-full">
             Book Free Demo Class
           </Button>
         </div>
